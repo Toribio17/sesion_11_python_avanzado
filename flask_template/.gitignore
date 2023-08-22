@@ -1,0 +1,7 @@
+*.pyc
+*.DS_Store
+venv3911*
+*.pdf
+*.doc
+*.docx
+venv*
