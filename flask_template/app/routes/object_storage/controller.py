@@ -12,5 +12,3 @@ def list_bucket_by_prefix(prefix):
     obj_cos= cos()
     bucket_list = obj_cos.list_bucket_documents(prefix)
     return bucket_list
-
-

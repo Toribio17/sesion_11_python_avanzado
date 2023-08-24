@@ -5,7 +5,7 @@ import requests
 # The API endpoint
 #url = "http://0.0.0.0:5003/auth/token" 
 url = "http://0.0.0.0:5003/people/allStudents"
-url = "http://0.0.0.0:5003/cos/listCos/input_files"
+#url = "http://0.0.0.0:5003/cos/listCos/input_files"
 
 new_data = {
     "username": "Charmander",

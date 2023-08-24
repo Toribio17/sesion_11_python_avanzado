@@ -1,6 +1,6 @@
 # importing the sys module
 import sys 
-sys.path.append('/Users/luistoribio/Documents/curso_python_avanzado/sesion_11_python_avanzado/flask_template')
+sys.path.append('')
 from dotenv import dotenv_values,load_dotenv
 from app.db.mongodb import MongoDB as mongo
 from app.db.object_storage import ObjecStorage as cos
@@ -21,12 +21,12 @@ class TestUtils(unittest.TestCase,Auth_login,cos,mongo):
         return file_value
                 
     
-    @unittest.skip("testing another one")
+    #@unittest.skip("testing another one")
     def test_db_mongo(self):
         self.assertNotEqual(str(self.connection_database()),"[ERROR] connection error")
         self.assertNotEqual(str(self.create_switch_data_collection()),"[ERROR] connection error")
-        self.assertNotEqual(str(self.insert_one_value()),"[ERROR] connection error")
-        self.assertNotEqual(str(self.insert_one_value_users()),"[ERROR] connection error")
+        self.assertNotEqual(str(self.insert_one_value("Jorge C","40")),"[ERROR] connection error")
+        self.assertNotEqual(str(self.insert_one_value_users({"name": "name", "age": "age"})),"[ERROR] connection error")
         
     def test_db_object(self):
         self.assertNotEqual(self.object_storage_connection(),"[ERROR] COS connection error")
@@ -39,10 +39,11 @@ class TestUtils(unittest.TestCase,Auth_login,cos,mongo):
         message_response = self.create_user("user_test","testing_value","1","testing@gmail.com")
         print(message_response['user_created'])
         self.assertTrue(message_response['user_created'])
+        self.assertFalse(message_response['user_created'])
         
 if __name__ == '__main__':
     
-    ENV = dotenv_values("/Users/luistoribio/Documents/curso_python_avanzado/sesion_11_python_avanzado/flask_template/.env")
+    ENV = dotenv_values(".env")
     load_dotenv(override=False)
     print("Env: ",ENV)
     
