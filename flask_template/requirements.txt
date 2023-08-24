@@ -18,5 +18,4 @@ flask_jwt_extended
 boto3
 neo4j
 py2neo
-unittest
 pytest
