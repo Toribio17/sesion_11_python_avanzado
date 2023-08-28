@@ -46,4 +46,8 @@ class Ocr_Process(Utils):
                 print("files does not exist: ", file_name)
         except PDFPageCountError as ex:
             print("Method failed with status code :" + str(ex))
+            
+if __name__ == '__main__':
+    obj = Ocr_Process()
+    obj.list_documents()
     

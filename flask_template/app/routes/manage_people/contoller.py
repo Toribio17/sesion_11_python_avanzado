@@ -7,7 +7,7 @@ people_blueprint = Blueprint("people", __name__, url_prefix="/people")
 
 #process a single file
 @people_blueprint.route("/allStudents", methods=["GET", "POST"])
-@jwt_required()
+#@jwt_required()
 def get_all_students():
     obj_student = student()
     student_response = obj_student.get_all_student()

@@ -9,6 +9,8 @@ class MongoDB():
         
         try:
             client = MongoClient(os.environ["MONGO_CONNECTION"])
+            #client = MongoClient(host='test_mongodb',ort=27017,username='root', password='rootpassword',authSource="admin")
+            
             server_info = client.server_info()
         except:
             server_info = "[ERROR] connection error"

@@ -1,6 +1,6 @@
 # importing the sys module
 import sys 
-sys.path.append('/Users/luistoribio/Documents/curso_python_avanzado/sesion_11_python_avanzado/flask_template')
+sys.path.append('')
 from dotenv import dotenv_values,load_dotenv
 from app.db.mongodb import MongoDB as mongo
 from app.db.object_storage import ObjecStorage as cos
@@ -9,7 +9,7 @@ import pytest
 import os
 
 
-ENV = dotenv_values("/Users/luistoribio/Documents/curso_python_avanzado/sesion_11_python_avanzado/flask_template/.env")
+ENV = dotenv_values(".env")
 load_dotenv(override=False)
 print("Env: ",ENV)
 
@@ -22,4 +22,5 @@ class TestUtilsPytest():
         #self.assertNotEqual(str(self.create_switch_data_collection()),"[ERROR] connection error")
         #self.assertNotEqual(str(self.insert_one_value()),"[ERROR] connection error")
         #self.assertNotEqual(str(self.insert_one_value_users()),"[ERROR] connection error")
+
     

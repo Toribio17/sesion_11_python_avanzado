@@ -7,7 +7,7 @@ ocr_blueprint = Blueprint("ocr", __name__, url_prefix="/ocr")
 
 #process a single file
 @ocr_blueprint.route("/ocrOneFile/<document_name>", methods=["GET", "POST"])
-@jwt_required()
+#@jwt_required()
 def ocr_single_file(document_name):
     obj_ocr = Ocr_Process()
     obj_ocr.optical_character_recognition(document_name)

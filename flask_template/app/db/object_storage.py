@@ -114,6 +114,6 @@ if __name__ == '__main__':
     print("Env: ",ENV)
     
     obj = ObjecStorage()
-    #obj.upload_document("example_2.pdf","input_files","input_files_2")
+    obj.upload_document("example_2.pdf","input_files","input_files_2")
     #obj.download_document("example_2.pdf","output_files","input_files_2")
-    obj.delete_document("example-1.pdf")
+    #obj.delete_document("example_2.pdf","")

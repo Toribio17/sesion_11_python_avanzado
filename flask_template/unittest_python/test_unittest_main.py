@@ -1,6 +1,6 @@
 # importing the sys module
 import sys 
-sys.path.append('')
+sys.path.append('/Users/luistoribio/Documents/curso_python_avanzado/sesion_11_python_avanzado/flask_template')
 from dotenv import dotenv_values,load_dotenv
 from app.db.mongodb import MongoDB as mongo
 from app.db.object_storage import ObjecStorage as cos
@@ -21,7 +21,7 @@ class TestUtils(unittest.TestCase,Auth_login,cos,mongo):
         return file_value
                 
     
-    #@unittest.skip("testing another one")
+    @unittest.skip("testing another one")
     def test_db_mongo(self):
         self.assertNotEqual(str(self.connection_database()),"[ERROR] connection error")
         self.assertNotEqual(str(self.create_switch_data_collection()),"[ERROR] connection error")

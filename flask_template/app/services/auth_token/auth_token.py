@@ -36,13 +36,13 @@ class Auth_login(mongo):
                 access_token = create_access_token(identity=user_name,additional_claims=additional_claims,fresh=datetime.timedelta(days=2),expires_delta=datetime.timedelta(days=2))
                 message_return = {"token": access_token, "user_id": user_name }
             else:
-                message_return = {"message":"user or login error","status":"520"}
+                message_return = {"message":"user or login error","status":"500"}
             
             return message_return
                 
         except Exception as e:
             print("[ERORR]: Token", e)
-            message_return = {"error":"bad credentials","status":"207"}
+            message_return = {"error":"bad credentials","status":"500"}
         
         
     def create_user(self,user_name,password,level,mail):
