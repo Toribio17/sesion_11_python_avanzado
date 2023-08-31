@@ -111,7 +111,7 @@ class WebCrawling(mongo,utils):
 if __name__ == '__main__':
     obj = WebCrawling()
     
-    #obj.find_xpath("https://www.browserstack.com/guide/selenium-webdriver-tutorial",'toc0')
-    #obj.click_button("https://www.browserstack.com/guide/selenium-webdriver-tutorial",'')
+    #obj.find_id("https://www.browserstack.com/guide/selenium-webdriver-tutorial",'toc0')
+    #obj.click_button_by_xpath("https://www.browserstack.com/guide/selenium-webdriver-tutorial",'')
     #obj.screen_shoot("https://www.browserstack.com/guide/selenium-webdriver-tutorial","browserstack")
     obj.get_all_text("https://www.browserstack.com/guide/selenium-webdriver-tutorial")

@@ -59,8 +59,11 @@ class TestingBot():
         passowrd = "secret_sauce"
         list_returns = []
         list_returns.append(self.send_value_xpath(xpath_user,user))
+        time.sleep(3)
         list_returns.append(self.send_value_xpath(xpath_password,passowrd))
+        time.sleep(3)
         list_returns.append(self.click_by_id(element_id))
+        time.sleep(3)
         
         return list_returns
     
