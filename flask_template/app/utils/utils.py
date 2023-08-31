@@ -36,5 +36,11 @@ class Utils:
         path_folder = os.path.join(string_1,string_2)
         
         return path_folder
+    
+    def create_folder(self,path,folder_name):
+        folder_path = self.join_paths(path,folder_name)
+        os.mkdir(folder_path)
+        
+        print("create")
 
 

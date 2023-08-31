@@ -11,15 +11,14 @@ people_blueprint = Blueprint("people", __name__, url_prefix="/people")
 def get_all_students():
     obj_student = student()
     student_response = obj_student.get_all_student()
-    
+
     return student_response
 
 #to send two variables use this format on browser /oneStudent/age&&31
 @people_blueprint.route("/oneStudent/<field>&&<student_name>", methods=["GET", "POST"])
-@jwt_required()
+#@jwt_required()
 def get_one_student(field,student_name):
     obj_student = student()
-    print(student_name)
     student_response = obj_student.get_one_student(field,student_name)
     
     return student_response
